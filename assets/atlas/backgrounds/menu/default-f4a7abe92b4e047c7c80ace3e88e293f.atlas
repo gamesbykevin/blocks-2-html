@@ -1,0 +1,17 @@
+default.png
+size:1024,1024
+repeat:none
+1
+bounds:2,2,576,324
+3
+bounds:2,328,576,324
+4
+bounds:2,654,576,324
+
+default2.png
+size:1024,1024
+repeat:none
+2
+bounds:2,2,576,324
+5
+bounds:2,328,576,324

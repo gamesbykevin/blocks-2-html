@@ -1,0 +1,215 @@
+{
+com.badlogic.gdx.graphics.g2d.BitmapFont: {
+	font_24: {
+		file: font_24.fnt
+	}
+	font_40: {
+		file: font_40.fnt
+	}
+	font_48: {
+		file: font_48.fnt
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
+	small_left: {
+		up: button_small_left
+		down: button_small_left_overlay
+		disabled: button_small_left_disabled
+	}
+	small_settings: {
+		up: button_small_settings
+		down: button_small_settings_overlay
+		disabled: button_small_settings_disabled
+	}
+	normal_music: {
+		up: button_normal_music_disabled
+		down: button_normal_music_overlay
+		disabled: button_normal_music_disabled
+		checked: button_normal_music
+	}
+	normal_rating: {
+		up: button_normal_rating
+		down: button_normal_rating_overlay
+		disabled: button_normal_rating_disabled
+	}
+	normal_reload: {
+		up: button_normal_reload
+		down: button_normal_reload_overlay
+		disabled: button_normal_reload_disabled
+	}
+	normal_right: {
+		up: button_normal_right
+		down: button_normal_right_overlay
+		disabled: button_normal_right_disabled
+	}
+	normal_share: {
+		up: button_normal_share
+		down: button_normal_share_overlay
+		disabled: button_normal_share_disabled
+	}
+	normal_sound: {
+		up: button_normal_sound_disabled
+		down: button_normal_sound_overlay
+		disabled: button_normal_sound_disabled
+		checked: button_normal_sound
+	}
+	normal_vibrate: {
+		up: button_normal_vibrate_disabled
+		down: button_normal_vibrate_overlay
+		disabled: button_normal_vibrate_disabled
+		checked: button_normal_vibrate
+	}
+	medium_achievements: {
+		up: button_medium_achievements
+		down: button_medium_achievements_overlay
+		disabled: button_medium_achievements_disabled
+	}
+	medium_leaderboards: {
+		up: button_medium_leaderboards
+		down: button_medium_leaderboards_overlay
+		disabled: button_medium_leaderboards_disabled
+	}
+	large_play: {
+		up: button_large_play
+		down: button_large_play_overlay
+		disabled: button_large_play_disabled
+	}
+	page_left: {
+		up: page_left
+		down: page_left_pressed
+	}
+	page_right: {
+		up: page_right
+		down: page_right_pressed
+	}
+	pagination: {
+		up: page_empty
+		checked: page_current
+	}
+	small_yt: {
+		up: button_small_yt
+		down: button_small_yt_overlay
+		disabled: button_small_yt_disabled
+	}
+	small_hint: {
+		up: button_small_hint
+		down: button_small_hint_overlay
+		disabled: button_small_hint_disabled
+	}
+	small_levels: {
+		up: button_small_levels
+		down: button_small_levels_overlay
+		disabled: button_small_levels_disabled
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
+	default: {
+		font: font_24
+	}
+	label_48: {
+		font: font_48
+	}
+	label_24: {
+		font: font_24
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.ProgressBar$ProgressBarStyle: {
+	default-horizontal: {
+		background: loading_background
+		knobBefore: loading_bar
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
+	level_locked: {
+		font: font_40
+		up: level_locked
+	}
+	level_select_0: {
+		font: font_40
+		up: level_select_0
+		down: level_select_0_overlay
+	}
+	level_select_1: {
+		font: font_40
+		up: level_select_1
+		down: level_select_1_overlay
+	}
+	level_select_2: {
+		font: font_40
+		up: level_select_2
+		down: level_select_2_overlay
+	}
+	level_select_3: {
+		font: font_40
+		up: level_select_3
+		down: level_select_3_overlay
+	}
+	world_1: {
+		font: font_24
+		up: button_world_1
+		down: button_world_1_overlay
+		disabled: button_world_1_locked
+	}
+	world_2: {
+		font: font_24
+		up: button_world_2
+		down: button_world_2_overlay
+		disabled: button_world_2_locked
+	}
+	world_3: {
+		font: font_24
+		up: button_world_3
+		down: button_world_3_overlay
+		disabled: button_world_3_locked
+	}
+	world_4: {
+		font: font_24
+		up: button_world_4
+		down: button_world_4_overlay
+		disabled: button_world_4_locked
+	}
+	world_1_completed: {
+		font: font_24
+		up: button_world_1_completed
+		down: button_world_1_overlay_completed
+		disabled: button_world_1_locked
+	}
+	world_2_completed: {
+		font: font_24
+		up: button_world_2_completed
+		down: button_world_2_overlay_completed
+		disabled: button_world_2_locked
+	}
+	world_3_completed: {
+		font: font_24
+		up: button_world_3_completed
+		down: button_world_3_overlay_completed
+		disabled: button_world_3_locked
+	}
+	world_4_completed: {
+		font: font_24
+		up: button_world_4_completed
+		down: button_world_4_overlay_completed
+		disabled: button_world_4_locked
+	}
+	trophy: {
+		font: font_24
+		up: trophy
+		disabled: trophy_disabled
+	}
+	tooltip: {
+		font: font_24
+		up: loading_bar
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextTooltip$TextTooltipStyle: {
+	default: {
+		label: default
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle: {
+	dialog_win: {
+		titleFont: font_24
+	}
+}
+}
