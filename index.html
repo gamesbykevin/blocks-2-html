@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<title>Blocks 2</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta id="gameViewport" name="viewport" content="width=device-width initial-scale=1">
+		<link href="styles.css" rel="stylesheet" type="text/css">
+		
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-41179444-1"></script>
+		<script type="text/javascript">
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-41179444-1');
+		</script>
+		
+		<script type="text/javascript">
+			const clientId = '610210979102-hej38rua5499pev338ro184pef4c5e1n.apps.googleusercontent.com';
+			const cookieName = 'sessionVariable';
+			var client;
+			
+			function initGoogleClient() {
+				client = google.accounts.oauth2.initTokenClient({
+					client_id: clientId,
+					scope: 'https://www.googleapis.com/auth/games https://www.googleapis.com/auth/drive.appdata',
+					ux_mode: 'popup',
+					callback: (response) => {
+						if (response && response.access_token) {
+							var d = new Date();
+							d.setTime(d.getTime() + (response.expires_in * 1000));
+							var expires = "expires="+ d.toUTCString();
+							document.cookie = cookieName + "=" + response.access_token + ";" + expires + ";path=/";
+						}
+					}
+				});
+			}
+			
+		</script>
+		<script src="https://accounts.google.com/gsi/client" onload="initGoogleClient()"></script>
+	</head>
+		
+	<body>
+		<div id="containerId" align="center"></div>
+		<script type="text/javascript">
+			
+			//detect orientation change
+			screen.orientation.addEventListener("change", function(e) {
+				if (e.currentTarget.type.indexOf('landscape') >= 0) {
+					renderGame();
+				} else {
+					promptUser();
+				}
+			});
+			
+			//is the screen already in landscape?
+			const landscape = window.matchMedia("(orientation: landscape)").matches;
+			
+			if (landscape) {
+				renderGame();
+			} else {
+				promptUser();
+			}
+			
+			function promptUser() {
+				var html = '<br><center><img src="https://gamesbykevin.com/wp-content/uploads/2023/09/rotate-e1695689465788.jpg"></center><br><br><center><font color="#ffffff">Please rotate your screen</font></center>';
+				document.getElementById("containerId").innerHTML = html;
+			}
+			
+			function renderGame() {
+			
+				var element = document.getElementById("containerId");
+				
+				//add html container for game
+				var html = '<br><br><center><button onclick="openFullscreen();">Open Fullscreen</button></center><br><br><div align="center" id="embed-html"></div>';
+				element.innerHTML = html;
+				
+				//create javascript import
+				var tmpScript = document.createElement('script');
+				tmpScript.src = 'html/html.nocache.js';
+				tmpScript.type = 'text/javascript';
+				element.appendChild(tmpScript);
+				
+				//also prevent scrolling away from the game
+				//document.getElementById('embed-html').addEventListener('mousedown', handleMouseDown, false);
+				//document.getElementById('embed-html').addEventListener('mouseup', handleMouseUp, false);
+			}
+			
+			function handleMouseDown(evt) {
+				evt.preventDefault();
+				evt.stopPropagation();
+				window.focus();
+			}
+
+			function handleMouseUp(evt) {
+				evt.preventDefault();
+				evt.stopPropagation();
+			}
+			
+			//prevent right click of the mouse
+			//document.addEventListener('contextmenu', event => event.preventDefault());
+			
+			function openFullscreen() {
+				var elem = document.getElementById("embed-html");
+				if (elem.requestFullscreen) {
+					elem.requestFullscreen();
+				} else if (elem.webkitRequestFullscreen) { /* Safari */
+					elem.webkitRequestFullscreen();
+				} else if (elem.msRequestFullscreen) { /* IE11 */
+					elem.msRequestFullscreen();
+				}
+			}
+		</script>
+	</body>	
+</html>
